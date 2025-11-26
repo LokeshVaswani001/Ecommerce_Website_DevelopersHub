@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand - E-Commerce Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone"></i> +1234567890</span>
+                    <span><i class="fas fa-envelope"></i> contact@brand.com</span>
+                </div>
+                <div class="top-bar-right">
+                    <div class="language-selector">
+                        <img src="assets/flags/US@2x.png" alt="US Flag" class="flag-icon">
+                        <span>English <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="currency-selector">
+                        <span>USD <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-logo">
+                    <img src="assets/Brand/logo-colored.png" alt="Brand Logo">
+                </div>
+                
+                <div class="nav-search">
+                    <input type="text" placeholder="Search products...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="#" class="nav-icon">
+                        <i class="far fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="nav-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="main-menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html?category=tech">Technology</a></li>
+                    <li><a href="products.html?category=clothing">Clothing</a></li>
+                    <li><a href="products.html?category=interior">Home & Living</a></li>
+                    <li><a href="checkout.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Latest trending<br><span class="highlight">Electronic items</span></h1>
+                        <p>Discover the best deals on cutting-edge technology</p>
+                        <a href="products.html" class="btn btn-primary">Shop Now</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/backgrounds/Mask group.png" alt="Hero Product">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="container">
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="assets/backgrounds/image 106.png" alt="Technology">
+                        <div class="category-overlay">
+                            <h3>Technology</h3>
+                            <a href="products.html?category=tech" class="btn btn-secondary">Explore</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/backgrounds/image 107.png" alt="Fashion">
+                        <div class="category-overlay">
+                            <h3>Fashion</h3>
+                            <a href="products.html?category=clothing" class="btn btn-secondary">Explore</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/backgrounds/image 98.png" alt="Home">
+                        <div class="category-overlay">
+                            <h3>Home & Living</h3>
+                            <a href="products.html?category=interior" class="btn btn-secondary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="deals-section">
+            <div class="container">
+                <div class="deals-banner">
+                    <img src="assets/backgrounds/Banner-board-800x420 2.png" alt="Deals Banner">
+                    <div class="banner-content">
+                        <h2>Super Deals</h2>
+                        <p>Get up to 50% off on selected items</p>
+                        <a href="products.html" class="btn btn-white">Shop Deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Products</h2>
+                    <a href="products.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 23.png" alt="Smart Watch">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart Watch Pro</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$299.99</span>
+                                <span class="old-price">$399.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(1, 'Smart Watch Pro', 299.99, 'assets/tech/image 23.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 29.png" alt="Wireless Headphones">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Wireless Headphones</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$199.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(2, 'Wireless Headphones', 199.99, 'assets/tech/image 29.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/alibaba/cloth/Bitmap.png" alt="Designer Shirt">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Designer Shirt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.2)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$89.99</span>
+                                <span class="old-price">$129.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(3, 'Designer Shirt', 89.99, 'assets/alibaba/cloth/Bitmap.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/interior/image 93.png" alt="Modern Lamp">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Modern Lamp</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$149.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(4, 'Modern Lamp', 149.99, 'assets/interior/image 93.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 32.png" alt="Smartphone">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            <span class="badge-new">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Latest Smartphone</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.8)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$899.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(5, 'Latest Smartphone', 899.99, 'assets/tech/image 32.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/alibaba/cloth/image 24.png" alt="Casual Wear">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Casual Wear Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.1)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$79.99</span>
+                                <span class="old-price">$119.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(6, 'Casual Wear Set', 79.99, 'assets/alibaba/cloth/image 24.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/interior/1.png" alt="Decorative Vase">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Decorative Vase</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.7)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$59.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(7, 'Decorative Vase', 59.99, 'assets/interior/1.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 33.png" alt="Tablet Pro">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Tablet Pro</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.6)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$599.99</span>
+                                <span class="old-price">$799.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(8, 'Tablet Pro', 599.99, 'assets/tech/image 33.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-section">
+            <div class="container">
+                <div class="promo-grid">
+                    <div class="promo-card">
+                        <img src="assets/backgrounds/Group 969.png" alt="Promo 1">
+                    </div>
+                    <div class="promo-card">
+                        <img src="assets/backgrounds/Group 982.png" alt="Promo 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Subscribe to our newsletter</h2>
+                    <p>Get the latest updates on new products and upcoming sales</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/Brand/logo-colored.png" alt="Brand Logo" class="footer-logo">
+                    <p>Your one-stop shop for all your needs. Quality products, great prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=tech">Technology</a></li>
+                        <li><a href="products.html?category=clothing">Clothing</a></li>
+                        <li><a href="products.html?category=interior">Home & Living</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brand E-Commerce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

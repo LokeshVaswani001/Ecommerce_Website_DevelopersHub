@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Brand E-Commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone"></i> +1234567890</span>
+                    <span><i class="fas fa-envelope"></i> contact@brand.com</span>
+                </div>
+                <div class="top-bar-right">
+                    <div class="language-selector">
+                        <img src="assets/flags/US@2x.png" alt="US Flag" class="flag-icon">
+                        <span>English <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="currency-selector">
+                        <span>USD <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-logo">
+                    <img src="assets/Brand/logo-colored.png" alt="Brand Logo">
+                </div>
+                
+                <div class="nav-search">
+                    <input type="text" placeholder="Search products...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="#" class="nav-icon">
+                        <i class="far fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="nav-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="main-menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html?category=tech">Technology</a></li>
+                    <li><a href="products.html?category=clothing">Clothing</a></li>
+                    <li><a href="products.html?category=interior">Home & Living</a></li>
+                    <li><a href="checkout.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li id="productName">Product Details</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="product-detail">
+            <div class="container">
+                <div class="product-detail-layout">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img id="mainImage" src="assets/tech/image 23.png" alt="Product">
+                            <button class="wishlist-btn-large"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="assets/tech/image 23.png" alt="Thumbnail" class="thumbnail active" onclick="changeImage(this)">
+                            <img src="assets/tech/image 29.png" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                            <img src="assets/tech/image 32.png" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                            <img src="assets/tech/image 33.png" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <h1 id="detailProductName">Smart Watch Pro</h1>
+                        
+                        <div class="product-rating-detail">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.0 (128 reviews)</span>
+                        </div>
+
+                        <div class="product-price-detail">
+                            <span class="price-large" id="detailPrice">$299.99</span>
+                            <span class="old-price-large">$399.99</span>
+                            <span class="discount-badge">-25%</span>
+                        </div>
+
+                        <div class="product-description">
+                            <h3>Description</h3>
+                            <p>Experience the latest in wearable technology with our Smart Watch Pro. Features include heart rate monitoring, GPS tracking, water resistance, and a stunning AMOLED display. Stay connected with notifications from your smartphone and track your fitness goals with precision.</p>
+                        </div>
+
+                        <div class="product-specifications">
+                            <h3>Specifications</h3>
+                            <ul>
+                                <li><strong>Display:</strong> 1.4" AMOLED</li>
+                                <li><strong>Battery Life:</strong> Up to 7 days</li>
+                                <li><strong>Water Resistance:</strong> 5 ATM</li>
+                                <li><strong>Connectivity:</strong> Bluetooth 5.0</li>
+                                <li><strong>Sensors:</strong> Heart Rate, GPS, Accelerometer</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-options">
+                            <div class="option-group">
+                                <label>Color:</label>
+                                <div class="color-options">
+                                    <button class="color-btn active" style="background-color: #000;" title="Black"></button>
+                                    <button class="color-btn" style="background-color: #fff; border: 1px solid #ddd;" title="White"></button>
+                                    <button class="color-btn" style="background-color: #3b82f6;" title="Blue"></button>
+                                </div>
+                            </div>
+
+                            <div class="option-group">
+                                <label>Quantity:</label>
+                                <div class="quantity-selector">
+                                    <button onclick="decreaseQuantity()"><i class="fas fa-minus"></i></button>
+                                    <input type="number" id="quantity" value="1" min="1" max="10">
+                                    <button onclick="increaseQuantity()"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-large" onclick="addToCartFromDetail()">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-secondary btn-large">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-truck"></i>
+                                <div>
+                                    <strong>Free Shipping</strong>
+                                    <p>On orders over $100</p>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-undo"></i>
+                                <div>
+                                    <strong>30-Day Returns</strong>
+                                    <p>Money back guarantee</p>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <strong>Secure Payment</strong>
+                                    <p>100% secure transaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <h2>Related Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 29.png" alt="Related Product">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Wireless Headphones</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$199.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(2, 'Wireless Headphones', 199.99, 'assets/tech/image 29.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 32.png" alt="Related Product">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Latest Smartphone</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.8)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$899.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(5, 'Latest Smartphone', 899.99, 'assets/tech/image 32.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 33.png" alt="Related Product">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Tablet Pro</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.6)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$599.99</span>
+                                <span class="old-price">$799.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(8, 'Tablet Pro', 599.99, 'assets/tech/image 33.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/tech/image 34.png" alt="Related Product">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Wireless Speaker</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.3)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">$129.99</span>
+                            </div>
+                            <button class="btn btn-add-cart" onclick="addToCart(9, 'Wireless Speaker', 129.99, 'assets/tech/image 34.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/Brand/logo-colored.png" alt="Brand Logo" class="footer-logo">
+                    <p>Your one-stop shop for all your needs. Quality products, great prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=tech">Technology</a></li>
+                        <li><a href="products.html?category=clothing">Clothing</a></li>
+                        <li><a href="products.html?category=interior">Home & Living</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brand E-Commerce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

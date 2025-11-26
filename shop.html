@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Shop • Ecommerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner container">
+    <div class="brand"><a href="index.html"><img src="assets/logo.png" alt="logo" class="logo"></a></div>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="shop.html" class="active">Shop</a></li><li><a href="product.html">Product</a></li><li><a href="cart.html">Cart</a></li><li><a href="checkout.html">Checkout</a></li></ul>
+    <div class="nav-actions"><img src="assets/icons/search.png" alt="search" class="icon"><a href="cart.html"><img src="assets/icons/cart.png" alt="cart" class="icon"></a></div>
+  </div></nav>
+
+  <header class="shop-hero container"><h1>Shop Products</h1><p>Find the perfect items from our latest collection</p></header>
+
+  <section class="filters container">
+    <div class="filter-left">
+      <select id="filterCategory">
+        <option value="all">Category: All</option>
+        <option value="bags">Bags</option>
+        <option value="watches">Watches</option>
+        <option value="shoes">Shoes</option>
+        <option value="glasses">Sunglasses</option>
+      </select>
+    </div>
+    <div class="filter-right">
+      <select id="sortOrder">
+        <option value="default">Sort by: Default</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
+  </section>
+
+  <main class="section container">
+    <div class="products-grid" id="shopGrid"></div>
+  </main>
+
+  <footer class="footer"><div class="container"><p>© 2025 Ecommerce Store — All Rights Reserved</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
